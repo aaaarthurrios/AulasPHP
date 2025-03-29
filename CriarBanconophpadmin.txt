@@ -1,0 +1,30 @@
+CREATE DATABASE LOJAS;
+USE LOJAS;
+
+CREATE TABLE LOJA(
+id int AUTO_INCREMENT PRIMARY KEY,
+    nome varchar (40),
+    telefone varchar (15),
+    email varchar (50)
+
+);
+
+
+
+Estrutura Básica de Tabela
+
+
+try {
+    $pdo = new PDO("mysql:dbname=MERCADO;host=localhost", "root", "");
+} catch (PDOException $e) {
+
+    $resposta = $pdo->prepare("INSERT INTO frutas(nome,preco,kg,)VALUES(:n,:p,:k)");
+
+    $resposta->bindValue(":n", "Banana");
+    $resposta->bindValue(":p", "10");
+    $resposta->bindValue(":k", 10);
+
+    $resposta->execute();
+} catch (PDOException $e) {
+    echo "Erro na inserção: " . $e->getMessage();
+}

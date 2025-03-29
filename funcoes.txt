@@ -1,0 +1,126 @@
+strlen($texto): Conta quantas letras tem um texto.
+
+php
+
+echo strlen("Olá"); // Mostra 3
+str_replace("velho", "novo", $texto): Troca partes de um texto.
+
+php
+
+echo str_replace("mundo", "PHP", "Olá, mundo!"); // "Olá, PHP!"
+strtolower($texto): Converte tudo para letras minúsculas.
+
+php
+
+echo strtolower("PHP É LEGAL"); // "php é legal"
+2. Funções para Listas (Arrays)
+Organizam e manipulam listas de dados.
+
+count($lista): Conta quantos itens tem na lista.
+
+php
+
+$frutas = ["maçã", "banana"];
+echo count($frutas); // Mostra 2
+array_push($lista, "novo item"): Adiciona um item no final da lista.
+
+php
+
+array_push($frutas, "uva"); // Agora a lista tem 3 frutas
+implode(", ", $lista): Transforma a lista em um texto separado por vírgulas.
+
+php
+
+echo implode(", ", $frutas); // "maçã, banana, uva"
+3. Funções para Arquivos
+Ler, escrever ou manipular arquivos no servidor.
+
+file_get_contents("arquivo.txt"): Lê o conteúdo de um arquivo.
+
+php
+
+$conteudo = file_get_contents("dados.txt");
+file_put_contents("arquivo.txt", "Olá!"): Escreve algo em um arquivo.
+
+php
+
+file_put_contents("log.txt", "Registro de acesso");
+4. Funções para Banco de Dados
+Conectam e interagem com bancos de dados como MySQL.
+
+mysqli_connect(): Conecta ao banco de dados.
+
+php
+
+$conexao = mysqli_connect("localhost", "usuario", "senha", "banco_de_dados");
+mysqli_query($conexao, "SELECT * FROM usuarios"): Executa um comando SQL.
+
+php
+
+$resultado = mysqli_query($conexao, "SELECT nome FROM usuarios");
+5. Funções para Datas e Horas
+Trabalham com datas, horários e formatos.
+
+date("d/m/Y"): Mostra a data atual no formato dia/mês/ano.
+
+php
+
+echo date("d/m/Y"); // Exemplo: 25/10/2023
+strtotime("2023-12-31"): Converte uma data em um timestamp (número de segundos desde 1970).
+
+php
+
+echo strtotime("2023-12-31"); // Algo como 1703980800
+6. Funções Matemáticas
+Fazem cálculos numéricos.
+
+rand(1, 10): Gera um número aleatório entre 1 e 10.
+
+php
+
+echo rand(1, 10); // Número aleatório
+round(3.7): Arredonda um número decimal.
+
+php
+
+echo round(3.7); // 4
+7. Funções para Sessões e Cookies
+Controlam dados temporários do usuário (como logins).
+
+session_start(): Inicia uma sessão para armazenar dados entre páginas.
+
+php
+
+session_start();
+$_SESSION["usuario"] = "João";
+setcookie("nome", "valor", tempo_de_vida): Cria um cookie no navegador.
+
+php
+
+setcookie("idioma", "pt-BR", time() + 3600); // Expira em 1 hora
+8. Funções para Verificar Tipos de Dados
+Checam se uma variável é do tipo esperado.
+
+is_string($variavel): Verifica se é um texto.
+
+php
+
+echo is_string("PHP"); // true
+is_array($variavel): Verifica se é uma lista.
+
+php
+
+echo is_array(["a", "b"]); // true
+9. Funções para Segurança
+Protegem contra erros ou ataques.
+
+htmlspecialchars($texto): Converte caracteres especiais em HTML (evita ataques XSS).
+
+php
+
+echo htmlspecialchars("<script>alert('hack');</script>"); // Mostra o texto sem executar o script
+password_hash("senha123", PASSWORD_DEFAULT): Cria um hash seguro de uma senha.
+
+php
+
+$hash = password_hash("senha123", PASSWORD_DEFAULT);

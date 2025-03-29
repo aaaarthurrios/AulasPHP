@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Carros</title>
+</head>
+<body>
+    <form method="get" action="04carro.php">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome"><br><br>
+
+        <label for="ano">Ano do modelo:</label>
+        <input type="text" name="ano" id="ano"><br><br>
+
+        <fieldset>
+            <legend>Marca</legend>
+            <input type="radio" name="marca" id="p" value="porsche">
+            <label for="p">Porsche</label><br>
+            
+            <input type="radio" name="marca" id="f" value="ferrari">
+            <label for="f">Ferrari</label><br>
+            
+            <input type="radio" name="marca" id="l" value="lamborghini">
+            <label for="l">Lamborghini</label><br>
+        </fieldset><br>
+
+        <input type="submit" value="Enviar">
+    </form> <!-- Tag de fechamento adicionada -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #ff4444;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffaa33;
+        }
